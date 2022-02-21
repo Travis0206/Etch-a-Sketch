@@ -1,0 +1,30 @@
+
+
+:root{
+    --grid-cols:1;
+    --grid-rows:1;
+}
+.container{
+    display: grid;
+    width: 1440px;
+    height: 800px;
+    grid-template-columns:  repeat(var(--grid-cols) , 1fr);
+    grid-template-rows: repeat(var(--grid-rows) , 1fr);
+    border: 1px solid black;
+}
+
+.container>.grid-item{
+    border: 2px solid black;
+    width: calc(1440px/var(--grid-cols));
+    height: calc(800px/var(--grid-rows));
+    box-sizing: border-box;
+
+}
+.hovered-color{
+    background-color: black;
+}
+button {
+    height: 50px;
+    width: 300px;
+}
+
